@@ -1,0 +1,9 @@
+{
+	"name": "AZURE-DATA-FACTORY-GCC",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "072e375c-320f-49fc-adef-be108746badc",
+		"tenantId": "7d2d065a-7cf0-4468-8502-6cae0f7663af"
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"name": "AZURE_SQL_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azure Sql Database",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "AIRPORTS DATASETS"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "RANK",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AIRPORT",
+				"type": "varchar"
+			},
+			{
+				"name": "CODE",
+				"type": "varchar"
+			},
+			{
+				"name": "COUNTRY",
+				"type": "varchar"
+			},
+			{
+				"name": "PASSENGERS",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "AIRPORTS"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,26 @@
+{
+	"name": "MULTIPLE_CSV_FILES",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azure Blob Storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MULTIPLE CSV FILES DATASETS"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "multiple-csv-files"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
