@@ -1,0 +1,27 @@
+{
+	"name": "COLON_DELIMITED_FILE_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE BLOB STORAGE KARAMA",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "COLON DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "COLON DELIMITED FILE.txt",
+				"container": "azure-data-factory-container"
+			},
+			"columnDelimiter": ":",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

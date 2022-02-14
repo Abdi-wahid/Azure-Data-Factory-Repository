@@ -1,9 +1,9 @@
 {
-	"name": "MULTIPLE CSV FILES",
+	"name": "COMMA DELIMITED FILE",
 	"properties": {
 		"activities": [
 			{
-				"name": "MULTIPLE CSV FILES",
+				"name": "COMMA DELIMITED FILE",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*txt",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -38,62 +37,50 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ID",
+									"name": "RANK",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ID",
+									"name": "RANK",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "FIRSTNAME",
+									"name": "COMPANY",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "FIRSTNAME",
+									"name": "COMPANY",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "LASTNAME",
+									"name": "HEADQUARTER",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "LASTNAME",
+									"name": "HEADQUARTER",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "GENDER",
+									"name": "FOUND",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "GENDER",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "REGION",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "REGION",
-									"type": "String",
-									"physicalType": "varchar"
+									"name": "FOUND",
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							}
 						],
@@ -106,20 +93,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_DS",
+						"referenceName": "COMMA_DELIMITED_FILE_DS",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_TABLE",
+						"referenceName": "COMMA_DELIMITED_FILE_TABLE",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2022-02-12T12:26:41Z"
+		"lastPublishTime": "2022-02-12T10:17:10Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

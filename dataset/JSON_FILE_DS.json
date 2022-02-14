@@ -1,0 +1,23 @@
+{
+	"name": "JSON_FILE_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE BLOB STORAGE KARAMA",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "JSON FILE"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "JSON FILE.json",
+				"container": "azure-data-factory-container"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

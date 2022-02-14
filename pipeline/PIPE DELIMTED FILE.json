@@ -1,9 +1,9 @@
 {
-	"name": "MULTIPLE CSV FILES",
+	"name": "PIPE DELIMTED FILE",
 	"properties": {
 		"activities": [
 			{
-				"name": "MULTIPLE CSV FILES",
+				"name": "PIPE DELIMITED FILE",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*txt",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -38,62 +37,38 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ID",
+									"name": "RANK",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ID",
+									"name": "RANK",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "FIRSTNAME",
+									"name": "NAME",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "FIRSTNAME",
+									"name": "NAME",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "LASTNAME",
+									"name": "SPEED",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "LASTNAME",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "GENDER",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "GENDER",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "REGION",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "REGION",
-									"type": "String",
-									"physicalType": "varchar"
+									"name": "SPEED",
+									"type": "Int16",
+									"physicalType": "smallint"
 								}
 							}
 						],
@@ -106,20 +81,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_DS",
+						"referenceName": "PIPE_DELIMITED_FILE_DS",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_TABLE",
+						"referenceName": "PIPE_DELIMITED_FILE_TABLE",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2022-02-12T12:26:41Z"
+		"lastPublishTime": "2022-02-12T09:55:27Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

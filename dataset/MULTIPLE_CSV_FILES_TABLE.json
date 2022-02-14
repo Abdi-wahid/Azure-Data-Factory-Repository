@@ -1,0 +1,20 @@
+{
+	"name": "MULTIPLE_CSV_FILES_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE SQL DATABASE TUTORIAL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MULTIPLE EXCEL FILES"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MULTIPLE CSV FILES"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

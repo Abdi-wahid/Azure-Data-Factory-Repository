@@ -1,0 +1,20 @@
+{
+	"name": "PIPE_DELIMITED_FILE_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE SQL DATABASE TUTORIAL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "PIPE DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PIPE DELIMITED FILE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,20 @@
+{
+	"name": "COLON_DELIMITED_FILE_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE SQL DATABASE TUTORIAL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "COLON DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "COLON DELIMITED FILE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

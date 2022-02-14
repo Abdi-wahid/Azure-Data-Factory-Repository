@@ -1,0 +1,9 @@
+{
+	"name": "AZURE-DATA-FACTORY-2022",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c2f09dc7-442f-4b6e-9209-f42ea2d5d097",
+		"tenantId": "7d2d065a-7cf0-4468-8502-6cae0f7663af"
+	}
+}

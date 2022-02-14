@@ -1,0 +1,20 @@
+{
+	"name": "JSON_FILE_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE SQL DATABASE TUTORIAL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "JSON FILE"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "JSON FILE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

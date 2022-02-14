@@ -1,0 +1,86 @@
+{
+	"name": "JSON FILE",
+	"properties": {
+		"activities": [
+			{
+				"name": "JSON FILE",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['RANK']"
+								},
+								"sink": {
+									"name": "RANK",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TEAM']"
+								},
+								"sink": {
+									"name": "TEAM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TITLES']"
+								},
+								"sink": {
+									"name": "TITLES",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "JSON_FILE_DS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "JSON_FILE_TABLE",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2022-02-13T14:17:11Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

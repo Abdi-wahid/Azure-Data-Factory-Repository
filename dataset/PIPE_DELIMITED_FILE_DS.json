@@ -1,0 +1,27 @@
+{
+	"name": "PIPE_DELIMITED_FILE_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE BLOB STORAGE KARAMA",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "PIPE DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "PIPE DELIMITED FILE.txt",
+				"container": "azure-data-factory-container"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

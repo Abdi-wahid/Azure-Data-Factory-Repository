@@ -1,0 +1,20 @@
+{
+	"name": "COMMA_DELIMITED_FILE_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE SQL DATABASE TUTORIAL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "COMMA DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "COMMA DELIMITED FILE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

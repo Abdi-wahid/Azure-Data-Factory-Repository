@@ -1,0 +1,20 @@
+{
+	"name": "TAP_DELIMITED_FILE_TABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE SQL DATABASE TUTORIAL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "TAP DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TAP DELIMITED FILE"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

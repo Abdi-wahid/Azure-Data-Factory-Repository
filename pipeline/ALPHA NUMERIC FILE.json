@@ -1,9 +1,9 @@
 {
-	"name": "MULTIPLE CSV FILES",
+	"name": "ALPHA NUMERIC FILE",
 	"properties": {
 		"activities": [
 			{
-				"name": "MULTIPLE CSV FILES",
+				"name": "ALPHA NUMERIC FILE",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*txt",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -44,54 +43,18 @@
 								},
 								"sink": {
 									"name": "ID",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "FIRSTNAME",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "FIRSTNAME",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "LASTNAME",
+									"name": "CLUB",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "LASTNAME",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "GENDER",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "GENDER",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "REGION",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "REGION",
+									"name": "CLUB",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -106,20 +69,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_DS",
+						"referenceName": "ALPHA_NUMERIC_FILE_DS",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_TABLE",
+						"referenceName": "ALPHA_NUMERIC_TABLE",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2022-02-12T12:26:41Z"
+		"lastPublishTime": "2022-02-12T10:59:57Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }

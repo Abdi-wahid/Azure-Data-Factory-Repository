@@ -1,0 +1,27 @@
+{
+	"name": "SEMICOLON_DELIMITED_FILE_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AZURE BLOB STORAGE KARAMA",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "SEMICOLON DELIMITED FILE"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "SEMICOLUMN DELIMITED FILE.txt",
+				"container": "azure-data-factory-container"
+			},
+			"columnDelimiter": ";",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

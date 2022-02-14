@@ -1,9 +1,9 @@
 {
-	"name": "MULTIPLE CSV FILES",
+	"name": "TAP DELIMITED FILE",
 	"properties": {
 		"activities": [
 			{
-				"name": "MULTIPLE CSV FILES",
+				"name": "TAP DELIMITED FILE",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,7 +20,6 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*txt",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -38,60 +37,48 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ID",
+									"name": "RANK",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ID",
+									"name": "RANK",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "FIRSTNAME",
+									"name": "NAME",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "FIRSTNAME",
+									"name": "NAME",
 									"type": "String",
 									"physicalType": "varchar"
 								}
 							},
 							{
 								"source": {
-									"name": "LASTNAME",
+									"name": "WEIGHT",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "LASTNAME",
-									"type": "String",
-									"physicalType": "varchar"
+									"name": "WEIGHT",
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "GENDER",
+									"name": "NATIVE",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "GENDER",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "REGION",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "REGION",
+									"name": "NATIVE",
 									"type": "String",
 									"physicalType": "varchar"
 								}
@@ -106,20 +93,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_DS",
+						"referenceName": "TAP_DELIMITED_FILE_DS",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "MULTIPLE_CSV_FILES_TABLE",
+						"referenceName": "TAP_DELIMITED_FILE_TABLE",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"annotations": [],
-		"lastPublishTime": "2022-02-12T12:26:41Z"
+		"lastPublishTime": "2022-02-12T10:32:11Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
 }
